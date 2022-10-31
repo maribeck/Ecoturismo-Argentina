@@ -47,13 +47,20 @@ nav {
 }
 
 .imghead{
-  width: 40%;
+  width: 15%;
+}
+.imghead2{
+  width: 10%;
+}
+
+.imgsecciones:hover{
+  transform: rotate(5deg);
 }
 
 .logo {
-  width: 100%;
-  padding-right: 10px;
-  
+  width:60%;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .entrada-blog img {
@@ -88,8 +95,6 @@ padding-bottom: 25px;
   bottom: 0;
   border-radius: 5px 25px;
   
-
-  
 }
 
 .listado {
@@ -108,6 +113,10 @@ padding-bottom: 25px;
 
 h2 {
   font-size: 2.5rem;
+  color: forestgreen;
+}
+h2,h1:hover {
+  color: rgb(139, 38, 34);
 }
 
 .contenedor2 .entrada-blog {
@@ -325,3 +334,7 @@ footer {
 }
 
 
+#map {
+	height: 500px;
+	width: 100%;
+}
