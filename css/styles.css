@@ -46,6 +46,10 @@ nav {
 
 }
 
+.imghead{
+  width: 40%;
+}
+
 .logo {
   width: 100%;
   padding-right: 10px;
@@ -319,7 +323,5 @@ footer {
   height: 100%;
   padding-top: 10px;
 }
-
-
 
 

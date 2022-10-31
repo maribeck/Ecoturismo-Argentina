@@ -3,36 +3,62 @@
   <head>
     <meta charset="utf-8" />
     <title>🍃 Ecoturismo en Argentina</title>
-    <link
-      rel="stylesheet"
-      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway:400,700,900"
-      rel="stylesheet"
-    />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/menubootstrap.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   </head>
 
   <body>
     <div class="contenedor">
-      <nav>
-        <a href="#" class="nav-item logo animate__animated animate__bounce"
-          ><img src="img/logo.png" alt="" /><img src="img/traveler.gif" alt=""
-        /></a>
-        <a href="#" class="nav-item" >Parques Nacionales</a>
-        <a href="#alojamientos" class="nav-item">Alojamientos</a>
-        <a href="#gastronomia-reg" class="nav-item">Gastronomía Regional</a>
-        <a href="#" class="nav-item">Excursiones</a>
-        <a href="#" class="nav-item">Turismo rural</a>
-        <a href="#" class="nav-item">Buscador de rutas</a>
-        <a href="#formulario" class="nav-item">Contacto</a>
+
+      <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- logo -->
+
+
+        
+        <!-- enlaces -->
+        <div class="collapse navbar-collapse" id="opciones">   
+          <ul class="navbar-nav">
+ 
+            <li class="nav-item">
+              <a class="nav-link" href="#">Parques Nacionales</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#alojamientos">Alojamientos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gastronomia-reg">Gastronomía Regional</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#excursiones">Excursiones</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="#trural">Turismo Rural</a>
+            </li>  
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.ruta0.com/rutas_argentinas.aspx">Buscador de Rutas</a>
+            </li>   
+            <li class="nav-item">
+              <a class="nav-link" href="#formulario">Contacto</a>
+            </li>           
+          </ul>
+        </div>
       </nav>
+      <div class="eco-section">
+        <img src="img/logo.png" alt="Logo Ecoturismo">
+
+      </div>
+
+
     </div>
 
     <div class="contenedor tres-columnas">
@@ -164,7 +190,7 @@
           <h2>Glampings/Campings</h2>
           <img src="img/glamping.jpg">
           <p>Esta confortable modalidad de ecoturismo presenta diversas opciones en Córdoba, Mendoza, provincia de Buenos Aires y la Patagonia. Qué servicios y comodidades ofrece cada complejo. El incremento de las prestaciones de alta gama en las actividades ecoturísticas marca una tendencia mundial en los últimos años. Hoy en día es posible, incluso en la Argentina, pasar unos días de vacaciones en un camping sin necesidad de resignar lujo, confort e instalaciones impecables y muy cómodas. La modalidad glamping alcanza ese equilibrio entre camping, glamour y contacto directo con la naturaleza.</p>
-          <button>Leer más</button>
+          <button><a href="https://blog.winesofargentina.com/es/destacadas/glamping-en-argentina/">Más info</a></button>
         </article>
         <article>
           <h2>Hosterías</h2>
@@ -181,7 +207,7 @@
 
 
       <div class="secciones">
-        <h1 id="gastronomia-reg">🍽 Gastronomía Regional</h1>
+        <h1 id="gastronomia-reg" class="h1g">🍽 Gastronomía Regional</h1>
         <img src="img/gastronomia2.jpg" alt="gastronomia">
         <p>La gastronomía de Argentina combina influjos provenientes de muy diversas culturas, desde los pueblos originarios ―maíz, papa, batata, mandioca, ají, tomate, morrón, poroto, yerba mate―, la llamada «cocina criolla» influida por los colonizadores españoles y los gauchos ―la carne vacuna, el vino y el dulce de leche― y la africana subsahariana ―el consumo de achuras​ y mondongo―,​ hasta las grandes corrientes migratorias provenientes de Europa y Asia occidental a partir del siglo xix, principalmente la italiana ―la pasta y la pizza― la española ―la lechería― y la boliviana, con gran incidencia en la producción hortícola.<br>
 
@@ -263,49 +289,34 @@
         </p>
 
         <div>
-          <form action="">
+          <form name="fvalida" action="https://formspree.io/f/xrgdyozn" method="POST">
             <label for="Nombre y Apellido">Nombre y Apellido:</label>
-            <input
-              type="text"
-              name="Nombre y Apellido"
-              id="Nombre y Apellido"
-            />
-            <br />
-            <label
-              >Nacionalidad:
-              <input
-                type="radio"
-                name="Nacionalidad"
-                value="Argentino/a"
-              />Argentino/a
-              <input
-                type="radio"
-                name="Nacionalidad"
-                value="Extranjero/a"
-              />Extranjero/a
+            <input type="text" name="nombre" id="nombre"/>
+            <br>
+            <label>Nacionalidad:
+              <input type="radio" name="nacionalidad" value="Argentino/a"/>Argentino/a
+              <input type="radio" name="nacionalidad" value="Extranjero/a"/>Extranjero/a
             </label>
-            <br />
-            <label for="N° Viajeros">Viajeros ¿Cuántos? </label>
-            <input type="number" name="N° Viajeros" id="N° Viajeros" />
-            <br />
+            <br>
+            <label for="Viajeros">Viajeros ¿Cuántos? </label>
+            <input type="number" name="viajeros" id="viajeros" />
+            <br>
             <label for="fecha">Fecha Viaje desde:</label>
-            <input type="date" name="fecha" />
+            <input type="date" name="fecha1" />
             <label for="fecha"> hasta:</label>
-            <input type="date" name="fecha" />
-            <br />
+            <input type="date" name="fecha2" />
+            <br>
             <label for="email">Correo Electrónico:</label>
             <input type="email" name="email" id="Correo Electrónico" />
-            <br />
-            <textarea name="comentario" rows="10" cols="50">
-Escribe tu consulta...</textarea
-            >
-            <br />
-            <input type="submit" /> <input type="reset" />
+            <br>
+            <textarea name="comentario" rows="10" cols="50">Escribe tu consulta...</textarea>
+            <br>
+            <input type="submit" value="Enviar" onclick="validarEnviar()"/> <input type="reset" />
           </form>
         </div>
       </article>
 
-      <br /><br /><br />
+      <br><br><br>
 
       <footer class="grid">
         <div>Quienes somos</div>
@@ -313,6 +324,24 @@ Escribe tu consulta...</textarea
         <div>Ecoturismo Argentina 2022</div>
       </footer>
       <br />
+
+      <div id="app">
+        <p> {{mensaje}} </p>
+        <p>Aprendiendo VUE en {{curso}}</p>
+        </div>
+
+
+
     </div>
-  </body>
+
+
+
+ 
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="js/eco.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+
+</body>
 </html>
